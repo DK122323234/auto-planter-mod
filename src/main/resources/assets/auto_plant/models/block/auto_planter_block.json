@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "auto_plant:block/auto_planter_block"
+  }
+}

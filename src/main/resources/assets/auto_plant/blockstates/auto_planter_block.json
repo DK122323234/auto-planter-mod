@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "auto_plant:block/auto_planter_block" }
+  }
+}
