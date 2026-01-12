@@ -13,11 +13,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 public class RegisterBlock {
-    // 1. Сначала создаем и регистрируем блок
     public static final Block AUTO_PLANTER_BLOCK = registerBlock("auto_planter_block",
             new AutoPlanterBlock(FabricBlockSettings.create()));
 
-    // 2. Используем уже зарегистрированный AUTO_PLANTER_BLOCK здесь, вместо создания нового!
     public static final BlockEntityType<AutoPlanterBlockEntity> AUTO_PLANTER_BLOCK_ENTITY_TYPE =
             registerAutoPlanterBlockEntityType("auto_planter_block_entity_type", AUTO_PLANTER_BLOCK);
 
@@ -27,7 +25,6 @@ public class RegisterBlock {
     }
 
     private static BlockEntityType<AutoPlanterBlockEntity> registerAutoPlanterBlockEntityType(String id, Block block){
-        // Здесь мы привязываем тип сущности к нашему блоку
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(AutoPlanterMod.MODID, id),
                 FabricBlockEntityTypeBuilder.create(AutoPlanterBlockEntity::new, block).build());
     }
@@ -37,7 +34,6 @@ public class RegisterBlock {
     }
 
     public static void register() {
-        // Пусто, так как статические поля инициализируются при обращении к классу.
-        // Но убедитесь, что вы вызываете RegisterBlock.register() в главном классе мода!
+
     }
 }
