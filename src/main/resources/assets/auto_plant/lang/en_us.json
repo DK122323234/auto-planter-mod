@@ -1,3 +1,4 @@
 {
-  "block.auto_plant.auto_planter_block": "Auto planter"
+  "block.auto_plant.auto_planter_block": "Auto planter",
+  "itemgroup.auto_planter": "Auto planter mod"
 }

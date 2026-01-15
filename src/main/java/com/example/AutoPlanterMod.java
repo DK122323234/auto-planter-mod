@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.block.RegisterBlock;
+import com.example.item.RegisterItemGroup;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.registry.Registries;
@@ -17,6 +18,7 @@ public class AutoPlanterMod implements ModInitializer {
         // However, some things (like resources) may still be uninitialized.
         // Proceed with mild caution.
         RegisterBlock.register();
+        RegisterItemGroup.registersItemGroups();
         LOGGER.info("Hello Fabric world!");
     }
 }
